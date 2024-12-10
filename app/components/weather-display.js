@@ -18,9 +18,9 @@ export default function WeatherDisplay({ weather }) {
         <Image
           src={current.weather_icons[0]}
           alt="Weather Icon"
-          width={80} // Corresponds to `w-20`
-          height={80} // Corresponds to `h-20`
-          className="h-20 w-20"
+          width={80}
+          height={80}
+          className="h-20 w-20 rounded-lg"
         />
         <div className="ml-4 text-center">
           <p className="text-6xl font-bold">{current.temperature}°C</p>

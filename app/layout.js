@@ -1,3 +1,4 @@
+import Footer from "./components/footer";
 import "./globals.css";
 
 // Creating a metadata object
@@ -10,7 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex flex-col min-h-screen bg-gray-50">
+        <div className="flex-grow">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }

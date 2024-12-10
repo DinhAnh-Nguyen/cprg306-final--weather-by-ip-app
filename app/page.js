@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { fetchIPAddress } from "./utilities/ip.js";
 import { fetchWeatherByIP } from "./utilities/weather-stack-api.js";
 import WeatherDisplay from "./components/weather-display.js";
+import Footer from "./components/footer.js";
 
 export default function Home() {
   const [weather, setWeather] = useState(null);
@@ -49,8 +50,8 @@ export default function Home() {
   // Show weather display
   // The weather prop is passed to here
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <main className="flex flex-col mt-20 items-center justify-center w-full flex-grow bg-gray-50">
       <WeatherDisplay weather={weather} />
-    </div>
+    </main>
   );
 }
