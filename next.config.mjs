@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
-
-module.exports = {
+const nextConfig = {
     env: {
         WEATHERSTACK_API_KEY: process.env.WEATHERSTACK_API_KEY,
     },
 };
+
+export default nextConfig;
