@@ -1,4 +1,4 @@
-const WEATHERSTACK_API_KEY = "e259eda57f48d2f35952797af8c65e52";
+const WEATHERSTACK_API_KEY = "";
 
 export const fetchWeatherByIP = async (ip) => {
     const response = await fetch(
