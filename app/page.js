@@ -10,6 +10,8 @@ export default function Home() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Make use of the 2 APIs
+  // Purpose: get weather data and pass the value to the prop of WeatherDisplay component
   useEffect(() => {
     const getWeather = async () => {
       try {
@@ -26,6 +28,7 @@ export default function Home() {
     getWeather();
   }, []);
 
+  // Display the loading screen if loading is false
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -34,6 +37,7 @@ export default function Home() {
     );
   }
 
+  // Handle errors
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-red-50">
@@ -42,6 +46,8 @@ export default function Home() {
     );
   }
 
+  // Show weather display
+  // The weather prop is passed to here
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <WeatherDisplay weather={weather} />

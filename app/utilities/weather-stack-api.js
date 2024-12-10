@@ -1,5 +1,7 @@
-
-
+// Fetch weather data from user's IP
+// The API key is secured inside the .env.local
+// Create a data value to hold the .json value
+// Return data
 export const fetchWeatherByIP = async (ip) => {
     const weather_api_key = process.env.WEATHERSTACK_API_KEY;
 
